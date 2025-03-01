@@ -1,0 +1,48 @@
+.Main{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color:rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid black;
+  
+  }
+
+.sub-div{
+    display: flex;
+    width: 100%;
+    
+    justify-content: left;
+    align-items: center;
+}
+.radiodiv{
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+   min-width: 200px;
+  }
+select{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+  }
+label{
+    white-space: nowrap;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;  
+}
+.title{
+    font-weight: 700;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  
+  }
+

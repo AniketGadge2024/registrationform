@@ -1,0 +1,8 @@
+#root{
+    
+    background: linear-gradient(202deg, rgba(93,102,255,1) 41%, rgba(153,159,240,1) 77%);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        
+    }
