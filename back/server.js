@@ -6,7 +6,7 @@ const app = express()
 app.use(cors(
     {
         origin:[],
-        methods:["POST"],
+        methods:["POST","GET"],
         credentials:true
     }
 ));
@@ -19,6 +19,9 @@ const db = mysql.createConnection({
     password: 'wad5NVPLlP',            
     database: 'sql12765564',            
    
+})
+app.get("/",(req,res)=>{
+    res.json("Hello")
 })
 
 
