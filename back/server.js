@@ -3,21 +3,27 @@ const mysql = require('mysql')
 const cors = require('cors')
 
 const app = express()
-app.use(cors());
+app.use(cors(
+    {
+        origin:[],
+        methods:["POST"],
+        credentials:true
+    }
+));
 app.use(express.json());
 
 
 const db = mysql.createConnection({
     host: 'sql12.freesqldatabase.com',   
-    user: 'sql12763688',                
-    password: 'qfXBYJSCGj',            
-    database: 'sql12763688',            
-    port: 3306 
+    user: 'sql12765564',                
+    password: 'wad5NVPLlP',            
+    database: 'sql12765564',            
+   
 })
 
 
-app.post('/registrationform',(req,res)=>{
-    const sql = "INSERT INTO registrationform(`name`,`fatherorhusband`,`mothername`,`address`,`TownorCity`,`PinCode`,`District`,`State`,`std`,`Tel`,`Mobile`,`email`,`Adharcard`,`dob`,`Gender`,`Nationality`,`OCIorPIO`,`applyfor`,`domicile`,`Religion`,`linguisticMinority`,`sscpassingyear`,`sscstate`,`ssclanguage`,`hscstate`,`hscDistrict`,`hscpassingyear`,`hscexamequivalent`,`hscRollNo`,`Reseravationstates`,`CasteValidity`,`certificateNumber`,`castcertificateDistrict`,`NonCreamyLayer`) Values(?)";
+app.post('/sql12765564',(req,res)=>{
+    const sql = "INSERT INTO test(`name`,`fatherorhusband`,`mothername`,`address`,`TownorCity`,`PinCode`,`District`,`State`,`std`,`Tel`,`Mobile`,`email`,`Adharcard`,`dob`,`Gender`,`Nationality`,`OCIorPIO`,`applyfor`,`domicile`,`Religion`,`linguisticMinority`,`sscpassingyear`,`sscstate`,`ssclanguage`,`hscstate`,`hscDistrict`,`hscpassingyear`,`hscexamequivalent`,`hscRollNo`,`Reseravationstates`,`CasteValidity`,`certificateNumber`,`castcertificateDistrict`,`NonCreamyLayer`) Values(?)";
     const values = [
         req.body.name,
         req.body.fatherorhusband,
@@ -72,6 +78,6 @@ app.post('/registrationform',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
+app.listen(3001,()=>{
     console.log("listening...");
 })

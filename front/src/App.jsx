@@ -77,7 +77,7 @@ const App = () => {
 
   const handleSubmit = (event)=>{
     event.preventDefault();
-    axios.post('http://localhost:3000/registrationform', values)
+    axios.post('http://localhost:3001/sql12765564', values)
     .then(res=>console.log("Registration Successfully !!"))
     .catch(err=>console.log(err));
   }
