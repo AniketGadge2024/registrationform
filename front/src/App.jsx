@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
+import axios, { Axios } from 'axios';
 import './App.css'
 const App = () => {
 
@@ -74,10 +74,11 @@ const App = () => {
     setValues({...values,[event.target.name]:[event.target.value]})
   }
 
+  axios.defaults.withCredentials=true;
 
   const handleSubmit = (event)=>{
     event.preventDefault();
-    axios.post('http://localhost:3001/sql12765564', values)
+    axios.post('https://registrationform-api.vercel.app/sql12765564', values)
     .then(res=>console.log("Registration Successfully !!"))
     .catch(err=>console.log(err));
   }
